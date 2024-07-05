@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'acc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'accreditation',
+        'NAME': 'acc',
         'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'NIKHIL@2003',
+        'PASSWORD':'root123',
         'PORT':3306,
     }
 }
