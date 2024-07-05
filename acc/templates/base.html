@@ -123,7 +123,7 @@
 														<a href="">Sub Criteria 1.2.1</a>
 													</li>
 													<li>
-														<a href="">Sub Criteria 1.2.2</a>
+														<a href="{% url 'criteria_1_2_2' %}">Sub Criteria 1.2.2</a>
 													</li>
 												</ul>
 											</div>
@@ -329,6 +329,9 @@
 				<div class="content-wrapper-scroll">
 
 
+					{% block content %}
+
+					{% endblock %}
 
 
 					<!-- App Footer start -->

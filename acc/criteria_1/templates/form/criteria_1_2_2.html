@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<!-- Content wrapper start -->
+<div class="content-wrapper">
+
+    <!-- Row start -->
+    <div class="row">
+        <div class="col-sm-12 col-12">
+
+            <!-- Card start -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Course Details Form</div>
+                </div>
+                <div class="card-body">
+
+                    <!-- Row start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-section-title">Course Information</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputCertificateName" class="form-label">
+                                    Name of Certificate/ Value added course offered and online
+                                    courses of MOOCs, SWAYAM, NPTEL etc. where the students of the
+                                    institution have enrolled and successfully completed
+                                </label>
+                                <input type="text" class="form-control" id="inputCertificateName"
+                                    placeholder="Enter Course Name">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputCourseCode" class="form-label">Course Code (if
+                                    any)</label>
+                                <input type="text" class="form-control" id="inputCourseCode"
+                                    placeholder="Enter Course Code">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputYearOfOffering" class="form-label">Year of
+                                    Offering/Study</label>
+                                <input type="text" class="form-control" id="inputYearOfOffering"
+                                    placeholder="Enter Year of Offering">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputPeriod" class="form-label">Period (from date - to
+                                    date)</label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="m-0">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bi bi-calendar4"></i>
+                                                </span>
+                                                <input type="text"
+                                                    class="form-control datepicker-range-auto-apply">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputDuration" class="form-label">Duration of Course</label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="m-0">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="bi bi-calendar4"></i>
+                                                </span>
+                                                <input type="text"
+                                                    class="form-control datepicker-range-time-24">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputEnrolledStudents" class="form-label">Number of Students
+                                    Enrolled in the Year</label>
+                                <input type="number" class="form-control" id="inputEnrolledStudents"
+                                    placeholder="Enter Number of Enrolled Students">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="inputCompletedStudents" class="form-label">Number of
+                                    Students Completing the Course in the Year</label>
+                                <input type="number" class="form-control" id="inputCompletedStudents"
+                                    placeholder="Enter Number of Completed Students">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row end -->
+
+                    <!-- Form actions footer start -->
+                    <div class="form-actions-footer">
+                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-success">Submit</button>
+                    </div>
+                    <!-- Form actions footer end -->
+
+                </div>
+            </div>
+            <!-- Card end -->
+
+        </div>
+    </div>
+    <!-- Row end -->
+
+</div>
+<!-- Content wrapper end -->
+
+{% endblock %}

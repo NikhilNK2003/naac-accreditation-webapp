@@ -12393,14 +12393,13 @@ img {
 }
 .sidebar-wrapper .sidebar-brand .logo {
   padding: 2rem 1.5rem 0rem 1.5rem;
-  min-height: 60px;
   margin: 0;
   display: flex;
   justify-content: center;
 }
 .sidebar-wrapper .sidebar-brand .logo img {
   max-width: 150px;
-  max-height: 50px;
+  max-height: 90px;
 }
 .sidebar-wrapper .sidebar-menu {
   padding: 20px 0;
