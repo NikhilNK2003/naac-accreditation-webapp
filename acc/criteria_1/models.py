@@ -20,9 +20,17 @@ class Criteria_1_2_1(models.Model):
         return self.num
     
 class Criteria_1_2_2(models.Model):
-    year = models.IntegerField()
+    YEAR_CHOICES = [
+        (2021, '2021-2022'),
+        (2022, '2022-2023'),
+        (2023, '2023-2024'),
+        (2024, '2024-2025'),
+        (2025, '2025-2026'),
+    ]
+
+    year = models.IntegerField(choices=YEAR_CHOICES)
     course_name = models.CharField(max_length=255)
-    course_code = models.CharField(max_length=50, blank=True, null=True)  # Assuming course code might not always be present
+    course_code = models.CharField(max_length=50, blank=True, null=True) 
     year_of_study = models.IntegerField()
     period_from = models.DateField()
     period_to = models.DateField()
@@ -31,7 +39,7 @@ class Criteria_1_2_2(models.Model):
     students_completed = models.IntegerField()
 
     def __str__(self):
-        return f"{self.year} - {self.course_name} ({self.course_code})"
+        return f"{self.get_year_display()} - {self.course_name} ({self.course_code})"
     
 class Criteria_1_3_1(models.Model):
     year = models.IntegerField()
