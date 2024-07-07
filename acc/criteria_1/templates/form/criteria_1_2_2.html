@@ -8,6 +8,7 @@
     <!-- Row start -->
     <div class="row">
         <div class="col-sm-12 col-12">
+			{% include 'messages.html' %}
             <!-- Card start -->
             <div class="card">
                 <div class="card-header">
@@ -79,7 +80,7 @@
 						</div>
 						<!-- Form actions footer start -->
 						<div class="form-actions-footer">
-							<a href="" class="btn btn-light">Cancel</a>
+							<a href="{% url 'criteria_1_2_2' %}" class="btn btn-light">Cancel</a>
 							<button type="submit" class="btn btn-success">Submit</button>
 						</div>
 					</form>
