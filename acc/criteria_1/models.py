@@ -30,7 +30,7 @@ class Criteria_1_2_2(models.Model):
 
     year = models.IntegerField(choices=YEAR_CHOICES)
     course_name = models.CharField(max_length=255)
-    course_code = models.CharField(max_length=50, blank=True, null=True) 
+    course_code = models.CharField(max_length=50, unique=True) 
     year_of_study = models.IntegerField()
     period_from = models.DateField()
     period_to = models.DateField()

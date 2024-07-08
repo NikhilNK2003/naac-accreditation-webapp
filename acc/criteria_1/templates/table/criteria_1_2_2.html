@@ -17,10 +17,11 @@
                         <form action="{% url 'upload_excel_1_2_2' %}" method="post" enctype="multipart/form-data" style="display: inline-block;">
                             {% csrf_token %}
                             <label for="excelFileInput" class="btn btn-success">
-                                <i class="bi bi-file-earmark-excel"></i> Upload Excel
+                                <i class="bi bi-file-earmark-arrow-up"></i> Upload Excel
                                 <input type="file" id="excelFileInput" name="excel_file" accept=".xlsx" style="display: none;" onchange="this.form.submit()">
                             </label>
                         </form>
+                        <a href="{% url 'export_excel_1_2_2' %}" class="btn btn-danger"><i class="bi bi-file-earmark-arrow-down"></i> Export Excel</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +35,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="basicExample" class="table table-bordered  custom-table">
+                        <table class="table table-bordered custom-table">
                             <thead class="thead-dark">
                                 <tr>
                                     <th class="align-middle col-3">Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</th>
@@ -49,17 +50,15 @@
                             <tbody>
                                 {% if 2021_records %}
                                     {% for record in 2021_records %}
-                                        {% if record.year == 2021 %}
-                                            <tr>
-                                                <td class="align-middle">{{ record.course_name }}</td>
-                                                <td class="align-middle">{{ record.course_code }}</td>
-                                                <td class="align-middle">{{ record.year_of_study }}</td>
-                                                <td class="align-middle">{{ record.period_from }} - {{ record.period_to }}</td>
-                                                <td class="align-middle">{{ record.duration }}</td>
-                                                <td class="align-middle">{{ record.students_enrolled }}</td>
-                                                <td class="align-middle">{{ record.students_completed }}</td>
-                                            </tr>
-                                        {% endif %}
+                                        <tr>
+                                            <td>{{ record.course_name }}</td>
+                                            <td>{{ record.course_code }}</td>
+                                            <td>{{ record.year_of_study }}</td>
+                                            <td>{{ record.period_from }} - {{ record.period_to }}</td>
+                                            <td>{{ record.duration }}</td>
+                                            <td>{{ record.students_enrolled }}</td>
+                                            <td>{{ record.students_completed }}</td>
+                                        </tr>
                                     {% endfor %}
                                 {% else %}
                                 <tr>
@@ -87,22 +86,21 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="basicExample" class="table custom-table">
-                            <thead>
+                        <table class="table table-bordered custom-table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th>Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc.  where the students of the institution have enrolled and successfully completed </th>
-                                    <th>Course Code (if any)</th>
-                                    <th>Year of offering/study</th>
-                                    <th>Period (from date - to date)</th>
-                                    <th>Duration of course</th>
-                                    <th>Number of students enrolled in the year</th>
-                                    <th>Number of Students completing the course  in the year</th>
+                                    <th class="align-middle col-3">Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</th>
+                                    <th class="align-middle">Course Code (if any)</th>
+                                    <th class="align-middle">Year of offering/study</th>
+                                    <th class="align-middle col-2">Period (from date - to date)</th>
+                                    <th class="align-middle">Duration of course</th>
+                                    <th class="align-middle">Number of students enrolled in the year</th>
+                                    <th class="align-middle ">Number of Students completing the course in the year</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% if 2022_records %}
                                     {% for record in 2022_records %}
-                                        {% if record.year == 2022 %}
                                             <tr>
                                                 <td>{{ record.course_name }}</td>
                                                 <td>{{ record.course_code }}</td>
@@ -112,7 +110,6 @@
                                                 <td>{{ record.students_enrolled }}</td>
                                                 <td>{{ record.students_completed }}</td>
                                             </tr>
-                                        {% endif %}
                                     {% endfor %}
                                 {% else %}
                                 <tr>
@@ -139,22 +136,21 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="basicExample" class="table custom-table">
-                            <thead>
+                        <table class="table table-bordered custom-table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th>Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc.  where the students of the institution have enrolled and successfully completed </th>
-                                    <th>Course Code (if any)</th>
-                                    <th>Year of offering/study</th>
-                                    <th>Period (from date - to date)</th>
-                                    <th>Duration of course</th>
-                                    <th>Number of students enrolled in the year</th>
-                                    <th>Number of Students completing the course  in the year</th>
+                                    <th class="align-middle col-3">Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</th>
+                                    <th class="align-middle">Course Code (if any)</th>
+                                    <th class="align-middle">Year of offering/study</th>
+                                    <th class="align-middle col-2">Period (from date - to date)</th>
+                                    <th class="align-middle">Duration of course</th>
+                                    <th class="align-middle">Number of students enrolled in the year</th>
+                                    <th class="align-middle ">Number of Students completing the course in the year</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% if 2023_records %}
                                     {% for record in 2023_records %}
-                                        {% if record.year == 2023 %}
                                             <tr>
                                                 <td>{{ record.course_name }}</td>
                                                 <td>{{ record.course_code }}</td>
@@ -164,7 +160,6 @@
                                                 <td>{{ record.students_enrolled }}</td>
                                                 <td>{{ record.students_completed }}</td>
                                             </tr>
-                                        {% endif %}
                                     {% endfor %}
                                 {% else %}
                                 <tr>
@@ -191,22 +186,21 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="basicExample" class="table custom-table">
-                            <thead>
+                        <table class="table table-bordered custom-table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th>Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc.  where the students of the institution have enrolled and successfully completed </th>
-                                    <th>Course Code (if any)</th>
-                                    <th>Year of offering/study</th>
-                                    <th>Period (from date - to date)</th>
-                                    <th>Duration of course</th>
-                                    <th>Number of students enrolled in the year</th>
-                                    <th>NNumber of Students completing the course  in the year</th>
+                                    <th class="align-middle col-3">Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</th>
+                                    <th class="align-middle">Course Code (if any)</th>
+                                    <th class="align-middle">Year of offering/study</th>
+                                    <th class="align-middle col-2">Period (from date - to date)</th>
+                                    <th class="align-middle">Duration of course</th>
+                                    <th class="align-middle">Number of students enrolled in the year</th>
+                                    <th class="align-middle ">Number of Students completing the course in the year</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% if 2024_records %}
                                     {% for record in 2024_records %}
-                                        {% if record.year == 2024 %}
                                             <tr>
                                                 <td>{{ record.course_name }}</td>
                                                 <td>{{ record.course_code }}</td>
@@ -216,7 +210,6 @@
                                                 <td>{{ record.students_enrolled }}</td>
                                                 <td>{{ record.students_completed }}</td>
                                             </tr>
-                                        {% endif %}
                                     {% endfor %}
                                 {% else %}
                                 <tr>
@@ -243,15 +236,16 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="basicExample" class="table custom-table">
-                            <thead>
+                        <table class="table table-bordered custom-table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th>Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc.  where the students of the institution have enrolled and successfully completed </th>
-                                    <th>Course Code (if any)</th>
-                                    <th>Year of offering/study</th>
-                                    <th>Period (from date - to date)</th>
-                                    <th>Duration of course</th>
-                                    <th>Number of Students completing the course  in the year</th>
+                                    <th class="align-middle col-3">Name of Certificate/ Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</th>
+                                    <th class="align-middle">Course Code (if any)</th>
+                                    <th class="align-middle">Year of offering/study</th>
+                                    <th class="align-middle col-2">Period (from date - to date)</th>
+                                    <th class="align-middle">Duration of course</th>
+                                    <th class="align-middle">Number of students enrolled in the year</th>
+                                    <th class="align-middle ">Number of Students completing the course in the year</th>
                                 </tr>
                             </thead>
                             <tbody>
