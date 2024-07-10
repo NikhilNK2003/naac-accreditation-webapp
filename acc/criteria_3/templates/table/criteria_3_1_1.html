@@ -13,9 +13,9 @@
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h3 class="card-title" style="font-size: 1.5rem;">Criteria 3.1.1</h3>
                     <div>
-                        <a href="{% url 'criteria_1_2_2_form' %}" class="btn btn-info"><i class="bi bi-plus-square"></i>
+                        <a href="{% url 'criteria_3_1_1_form' %}" class="btn btn-info"><i class="bi bi-plus-square"></i>
                             New</a>
-                        <form action="{% url 'upload_excel_1_2_2' %}" method="post" enctype="multipart/form-data"
+                        <form action="{% url 'upload_excel_3_1_1' %}" method="post" enctype="multipart/form-data"
                             style="display: inline-block;">
                             {% csrf_token %}
                             <label for="excelFileInput" class="btn btn-success">
@@ -24,7 +24,7 @@
                                     style="display: none;" onchange="this.form.submit()">
                             </label>
                         </form>
-                        <a href="{% url 'export_excel_1_2_2' %}" class="btn btn-danger"><i
+                        <a href="{% url 'export_excel_3_1_1' %}" class="btn btn-danger"><i
                                 class="bi bi-file-earmark-arrow-down"></i> Export Excel</a>
                     </div>
                 </div>
