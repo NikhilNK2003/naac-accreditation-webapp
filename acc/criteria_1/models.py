@@ -39,7 +39,7 @@ class Criteria_1_2_2(models.Model):
     students_completed = models.IntegerField()
 
     def __str__(self):
-        return f"{self.get_year_display()} - {self.course_name} ({self.course_code})"
+        return f"{self.course_name}"
     
 class Criteria_1_3_1(models.Model):
     year = models.IntegerField()

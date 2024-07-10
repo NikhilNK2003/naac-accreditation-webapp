@@ -7,7 +7,6 @@ import openpyxl
 from openpyxl import Workbook
 from io import BytesIO
 from django.contrib import messages
-
 from openpyxl.styles import Alignment, Border, Side, Font, PatternFill
 from openpyxl.utils import get_column_letter
 # Create your views here.
