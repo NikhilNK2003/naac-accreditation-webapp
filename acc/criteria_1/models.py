@@ -21,7 +21,7 @@ class Criteria_1_2_1(models.Model):
     
 class Criteria_1_2_2(models.Model):
     YEAR_CHOICES = [
-        (2021, '2021-2022'),
+        (2021, 'June 2021 - 2022'),
         (2022, '2022-2023'),
         (2023, '2023-2024'),
         (2024, '2024-2025'),
