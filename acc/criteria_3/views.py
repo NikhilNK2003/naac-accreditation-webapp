@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Criteria_3_1_1
+from .models import Criteria_3_1_1, Criteria_3_2_2
 from.forms import *
 from datetime import datetime
 from django.db import transaction
@@ -28,6 +28,6 @@ def export_excel_3_1_1(request):
 
 def criteria_3_2_2(request):
     context = {
-        'records' : criteria_3_2_2.objects.all()
+        'records' : Criteria_3_2_2.objects.all()
     }
     return render(request, 'table/criteria_3_2_2.html', context=context)
