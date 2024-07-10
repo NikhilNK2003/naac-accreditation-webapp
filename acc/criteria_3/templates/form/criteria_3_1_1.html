@@ -1,22 +1,22 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
 <!-- Content wrapper start -->
 <div class="content-wrapper">
-    <!-- Row start -->
-    <div class="row">
-        <div class="col-sm-12 col-12">
+	<!-- Row start -->
+	<div class="row">
+		<div class="col-sm-12 col-12">
 			{% include 'messages.html' %}
-            <!-- Card start -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">Criteria 1.2.2</div>
-                </div>
+			<!-- Card start -->
+			<div class="card">
+				<div class="card-header">
+					<div class="card-title">Criteria 1.2.2</div>
+				</div>
 
-                <div class="card-body">
-                    <!-- Row start -->
+				<div class="card-body">
+					<!-- Row start -->
 					<!-- your_template.html -->
 					<form method="post" action="{% url 'criteria_1_2_2_form' %}">
 						{% csrf_token %}
@@ -32,49 +32,57 @@
 							</div>
 							<div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Name of Certificate/Value added course offered and online courses of MOOCs, SWAYAM, NPTEL etc. where the students of the institution have enrolled and successfully completed</label>
+									<label class="form-label">Name of the research project/ endowment
+									</label>
 									{{ form.course_name }}
 								</div>
 							</div>
 							<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Course Code (if any)</label>
+									<label class="form-label">Name of the Principal Investigator/Co-investigator
+									</label>
 									{{ form.course_code }}
 								</div>
 							</div>
 							<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Year of Offering/Study</label>
+									<label class="form-label">Department of Principal Investigator
+									</label>
 									{{ form.year_of_study }}
 								</div>
 							</div>
 							<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">From Date</label>
+									<label class="form-label">Year of Award
+									</label>
 									{{ form.period_from }}
 								</div>
 							</div>
 							<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">To Date</label>
+									<label class="form-label">Amount Sanctioned
+									</label>
 									{{ form.period_to }}
 								</div>
 							</div>
 							<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Duration of course</label>
+									<label class="form-label">Duration of the project
+									</label>
 									{{ form.duration }}
 								</div>
 							</div>
 							<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Number of students enrolled in the year</label>
+									<label class="form-label">Name of the Funding Agency
+									</label>
 									{{ form.students_enrolled }}
 								</div>
 							</div>
 							<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 								<div class="mb-3">
-									<label class="form-label">Number of Students completing the course in the year</label>
+									<label class="form-label">Type (Government/non-Government)
+									</label>
 									{{ form.students_completed }}
 								</div>
 							</div>
@@ -85,14 +93,14 @@
 							<button type="submit" class="btn btn-success">Submit</button>
 						</div>
 					</form>
-                    <!-- Form actions footer end -->
-                </div>
-            </div>
-            <!-- Card end -->
-        </div>
-    </div>
-    <!-- Row end -->
+					<!-- Form actions footer end -->
+				</div>
+			</div>
+			<!-- Card end -->
+		</div>
+	</div>
+	<!-- Row end -->
 </div>
-<!-- Content wrapper end --> 
- 
+<!-- Content wrapper end -->
+
 {% endblock %}
