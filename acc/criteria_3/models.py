@@ -7,6 +7,13 @@ def validate_word_count(value):
         raise ValidationError(f'Description cannot exceed 500 words. Current word count: {word_count}')
 
 class Criteria_3_1_1(models.Model):
+    year = models.IntegerField(
+        choices=[(2021, '2021-2022'),
+        (2022, '2022-2023'),
+        (2023, '2023-2024'),
+        (2024, '2024-2025'),
+        (2025, '2025-2026'),]
+    )
     project_name = models.CharField(max_length=255)
     principal_investigator = models.CharField(max_length=255)
     department = models.CharField(max_length=255)
@@ -20,7 +27,7 @@ class Criteria_3_1_1(models.Model):
     )
 
     def __str__(self):
-        return f"{self.project_name} - {self.principal_investigator} ({self.year_of_award})"
+        return f"{self.year} - {self.project_name})"
 
 class Criteria_3_2_1(models.Model):
     year = models.IntegerField(
@@ -150,10 +157,8 @@ class Criteria_3_5_1(models.Model):
         (2024, '2024-2025'),
         (2025, '2025-2026'),]
     )
-    serial_number = models.AutoField(primary_key=True)
     mou_name = models.CharField(max_length=255)
     institution_name = models.CharField(max_length=255)
-    contact_details = models.TextField()
     signing_year = models.PositiveIntegerField()
     PURPOSE_CHOICES = [
         ('Internship', 'Internship'),
@@ -162,6 +167,7 @@ class Criteria_3_5_1(models.Model):
         ('Student/Faculty Exchange', 'Student/Faculty Exchange'),
         ('Collaborative Research', 'Collaborative Research'),
     ]
+    pourpose = models.CharField(choices=PURPOSE_CHOICES, max_length=100)
     duration = models.CharField(max_length=100)
     activities = models.TextField()  
     document_link = models.URLField()
