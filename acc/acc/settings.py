@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'criteria_1',
+    'criteria_2',
     'criteria_3',
+
 ]
 
 MIDDLEWARE = [
@@ -79,10 +81,10 @@ WSGI_APPLICATION = 'acc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'acc',
+        'NAME': 'accreditation',
         'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'root123',
+        'PASSWORD':'NIKHIL@2003',
         'PORT':3306,
     }
 }
