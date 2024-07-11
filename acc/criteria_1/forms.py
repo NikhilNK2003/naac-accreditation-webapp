@@ -16,3 +16,5 @@ class CriteriaForm_1_2_2(forms.ModelForm):
             'students_enrolled': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Number of Students Enrolled'}),
             'students_completed': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Number of Students Completed'}),
         }
+
+

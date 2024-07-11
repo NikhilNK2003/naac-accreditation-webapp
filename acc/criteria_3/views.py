@@ -40,6 +40,31 @@ def export_excel_3_1_1(request):
 
 def criteria_3_2_2(request):
     context = {
-        'records' : Criteria_3_2_2.objects.all()
+        '2021_records': Criteria_3_2_2.objects.filter(year = '2021'),
+        '2022_records': Criteria_3_2_2.objects.filter(year = '2022'),
+        '2023_records': Criteria_3_2_2.objects.filter(year = '2023'),
+        '2024_records': Criteria_3_2_2.objects.filter(year = '2024'),
+        '2025_records': Criteria_3_2_2.objects.filter(year = '2025')
     }
     return render(request, 'table/criteria_3_2_2.html', context=context)
+
+def criteria_3_2_2_form(request):
+    if request.method == 'POST':
+        form = CriteriaForm_3_2_2(request.POST)
+        if form.is_valid():
+            form.save() 
+            messages.success(request, 'Data Added Successfully')
+            return redirect('criteria_3_2_2')
+        else:
+            messages.error(request, 'Enter valid Data')
+    form = CriteriaForm_3_2_2()
+    context = {
+        'form': form,
+    }
+    return render(request, 'form/criteria_3_2_2.html', context=context)
+
+def upload_excel_3_2_2(request):
+    pass
+
+def export_excel_3_2_2(request):
+    pass
