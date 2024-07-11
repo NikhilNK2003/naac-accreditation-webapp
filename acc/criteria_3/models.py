@@ -134,9 +134,15 @@ class Criteria_3_4_2(models.Model):
         return f"{self.year} - {self.description[:50]}"
 
 class Criteria_3_4_3(models.Model):
+    year = models.IntegerField(
+        choices=[(2021, '2021-2022'),
+        (2022, '2022-2023'),
+        (2023, '2023-2024'),
+        (2024, '2024-2025'),
+        (2025, '2025-2026'),]
+    )
     activity_name = models.CharField(max_length=255)
     organizing_unit = models.CharField(max_length=255) 
-    collaborating_agency = models.CharField(max_length=255, blank=True, null=True)
     scheme_name = models.CharField(max_length=255, blank=True, null=True)
     activity_year = models.PositiveIntegerField(
         choices=[(2021, '2021-2022'),
