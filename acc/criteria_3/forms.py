@@ -34,6 +34,28 @@ class CriteriaForm_3_2_2(forms.ModelForm):
         }
 
 
+class CriteriaForm_3_3_1(forms.ModelForm):
+    class Meta:
+        model = Criteria_3_3_1
+        fields = [
+            'year', 'title_of_paper', 'authors', 'department', 
+            'journal_name', 'year_of_publication', 'issn_number', 
+            'journal_website_link', 'article_link', 'is_ugc_care_listed'
+        ]
+        widgets = {
+            'year': forms.Select(attrs={'class': 'form-select'}),
+            'title_of_paper': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title of Paper'}),
+            'authors': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Authors'}),
+            'department': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Department'}),
+            'journal_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Journal Name'}),
+            'year_of_publication': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Year of Publication'}),
+            'issn_number': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter ISSN Number'}),
+            'journal_website_link': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'Enter Journal Website Link'}),
+            'article_link': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'Enter Article Link'}),
+            'is_ugc_care_listed': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        }
+
+
 class CriteriaForm_3_5_1(forms.ModelForm):
     class Meta:
         model = Criteria_3_5_1

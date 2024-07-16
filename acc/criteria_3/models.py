@@ -73,8 +73,8 @@ class Criteria_3_3_1(models.Model):
     authors = models.CharField(max_length=500)  # Considering multiple authors
     department = models.CharField(max_length=255)
     journal_name = models.CharField(max_length=255)
+    year_of_publication = models.IntegerField()
     issn_number = models.CharField(max_length=20, blank=True, null=True)  # ISSN number can be optional
-    ugc_recognition_link = models.URLField(blank=True, null=True)  # URL to UGC recognition or DOI
     journal_website_link = models.URLField(blank=True, null=True)  # URL to the journal's website
     article_link = models.URLField(blank=True, null=True)  # URL to the article/paper/abstract
     is_ugc_care_listed = models.BooleanField(default=False)  # Boolean to indicate if listed in UGC CARE list
@@ -134,9 +134,15 @@ class Criteria_3_4_2(models.Model):
         return f"{self.year} - {self.description[:50]}"
 
 class Criteria_3_4_3(models.Model):
+    year = models.IntegerField(
+        choices=[(2021, '2021-2022'),
+        (2022, '2022-2023'),
+        (2023, '2023-2024'),
+        (2024, '2024-2025'),
+        (2025, '2025-2026'),]
+    )
     activity_name = models.CharField(max_length=255)
     organizing_unit = models.CharField(max_length=255) 
-    collaborating_agency = models.CharField(max_length=255, blank=True, null=True)
     scheme_name = models.CharField(max_length=255, blank=True, null=True)
     activity_year = models.PositiveIntegerField(
         choices=[(2021, '2021-2022'),
