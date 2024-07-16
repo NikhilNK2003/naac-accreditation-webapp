@@ -73,8 +73,8 @@ class Criteria_3_3_1(models.Model):
     authors = models.CharField(max_length=500)  # Considering multiple authors
     department = models.CharField(max_length=255)
     journal_name = models.CharField(max_length=255)
+    year_of_publication = models.IntegerField()
     issn_number = models.CharField(max_length=20, blank=True, null=True)  # ISSN number can be optional
-    ugc_recognition_link = models.URLField(blank=True, null=True)  # URL to UGC recognition or DOI
     journal_website_link = models.URLField(blank=True, null=True)  # URL to the journal's website
     article_link = models.URLField(blank=True, null=True)  # URL to the article/paper/abstract
     is_ugc_care_listed = models.BooleanField(default=False)  # Boolean to indicate if listed in UGC CARE list
